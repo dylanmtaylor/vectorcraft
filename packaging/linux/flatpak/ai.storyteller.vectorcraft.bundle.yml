@@ -29,6 +29,9 @@ finish-args:
   # dialog lists no printers.
   - --socket=cups
   - --system-talk-name=org.freedesktop.Avahi
+  # The user's CUPS settings, read-only: their default printer and saved options (lpoptions)
+  # and a print server named in their client.conf, which lp reaches over the network.
+  - --filesystem=~/.cups:ro
   # Network for the update check against GitHub releases.
   - --share=network
   # Cursor theme: without the cursor-shape protocol (e.g. GNOME 46) winit loads the theme itself.
